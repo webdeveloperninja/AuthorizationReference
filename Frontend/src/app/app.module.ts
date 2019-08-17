@@ -5,11 +5,11 @@ import { OAuthModule } from 'angular-oauth2-oidc';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
-import { CallbackComponent } from './callback/callback.component';
+import { AuthModule } from './auth/auth.module';
 
 @NgModule({
-  declarations: [AppComponent, CallbackComponent],
-  imports: [HttpClientModule, OAuthModule.forRoot(), BrowserModule, AppRoutingModule],
+  declarations: [AppComponent],
+  imports: [HttpClientModule, OAuthModule.forRoot(), BrowserModule, AppRoutingModule, AuthModule],
   providers: [],
   bootstrap: [AppComponent]
 })
