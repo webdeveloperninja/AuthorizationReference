@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { CallbackComponent } from './auth/components/callback/callback.component';
+import { ViewTodosComponent } from './view-todos/view-todos.component';
 
 const routes: Routes = [
   {
-    path: 'callback',
-    component: CallbackComponent
+    path: '',
+    component: ViewTodosComponent
   }
 ];
 
