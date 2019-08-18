@@ -15,19 +15,12 @@ import { AuthModule } from './auth/auth.module';
     HttpClientModule,
     OAuthModule.forRoot({
       resourceServer: {
-        allowedUrls: ['https://jsonplaceholder.typicode.com/todos/1'],
+        allowedUrls: ['https://jsonplaceholder.typicode.com'],
         sendAccessToken: true
       }
     }),
     BrowserModule,
     AppRoutingModule
-  ],
-  providers: [
-    {
-      provide: HTTP_INTERCEPTORS,
-      useClass: DefaultOAuthInterceptor,
-      multi: true
-    }
   ],
   bootstrap: [AppComponent]
 })
